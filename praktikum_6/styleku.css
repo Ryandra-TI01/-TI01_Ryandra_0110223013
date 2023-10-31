@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(232, 232, 232);
+}
+#header{
+    width: 80%;
+    margin: auto;
+    background-color: bisque;
+    padding: 1vh;
+}
+h1{
+    text-align: center;
+    color: blue;
+}
+blockquote{
+    text-align: center;
+    background-color: yellow;
+}
+div:nth-child(2){
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+ul li {
+    display: inline;
+}
+.gambar{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.gambar img{
+    width: 15%;
+}
+.isi{
+    margin: auto;
+    width: 80%;
+}
+.isi p{
+    text-align: justify;
+}
+.B{
+    color: blue;
+    font-size: 50px;
+    font-weight: 500;
+}
+#profil{
+    width: 80%;
+    margin: auto;
+}
+#beternak{
+    width: 80%;
+    margin: auto;
+}
+.koleksi{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.koleksi img{
+    width: 20%;
+}
+.promo{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+
+}
+.promo ol li{
+    width: 10%;
+    margin: auto;
+}
