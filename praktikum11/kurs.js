@@ -1,8 +1,7 @@
 function rupiahtodollar() {
-    let inputdollar = document.getElementById('dollar').value
+    let inputrupiah = document.getElementById('rupiah').value
 
-    let nilaidollartorupiah = inputdollar*14650
-    console.log(nilaidollartorupiah);
-    hasilrupiah.innerHTML = 'Rp '+nilaidollartorupiah
-    hasildollar.innerHTML = '$ '+inputdollar
+    let nilaidrupiahtodollar= inputrupiah/14650
+    hasilrupiah.innerHTML = 'Rp '+inputrupiah
+    hasildollar.innerHTML = '$ '+nilaidrupiahtodollar.toFixed(2)
 }
