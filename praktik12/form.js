@@ -29,6 +29,17 @@ function validation() {
 
     if (nama_pelanggan == namap && email == emailp && jam_keberangakatan == jamp && tujuan == tujuanp &&tiket == tiketp) {
         alert('Terima kasih tiket anda valid !')
+        error_jumlah.textContent = '';
+        icon_jumlah.innerHTML = '';
+        error_tujuan.textContent = '';
+        icon_tujuan.innerHTML = '';
+        error_waktu.textContent = '';
+        icon_waktu.innerHTML = '';
+        error_email.textContent = '';
+        icon_email.innerHTML = '';
+        error_nama.textContent = '';
+        icon_nama.innerHTML = '';
+
             result.innerHTML =
              `<div id="page" class="position-absolute top-50 start-50 translate-middle">
              <div id="container">
