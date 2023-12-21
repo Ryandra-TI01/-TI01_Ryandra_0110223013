@@ -4,9 +4,6 @@ const jamp = '05:00'
 const tujuanp = 'Aceh'
 const tiketp = '1'
 
-// let button = document.getElementById('button')
-// button.addEventListener('onclick',validation)
-
 function validation() {
   
     let nama_pelanggan = document.getElementById('pelanggan').value
