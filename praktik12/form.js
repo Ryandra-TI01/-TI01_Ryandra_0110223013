@@ -79,9 +79,9 @@ function validation() {
        
     }else {
         if (nama_pelanggan == '') {
-            error_nama.textContent = 'nama tidak boleh kosong!';
+            error_nama.textContent = 'Error: Nama tidak boleh kosong! nama tidak boleh melebihi 30 karakter';
             icon_nama.innerHTML = ' <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-alert-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg>';
-            alert('Error: Nama tidak boleh kosong!');
+            alert('Error: Nama tidak boleh kosong! nama tidak boleh melebihi 30 karakter');
         }else{
             error_nama.textContent = '';
             icon_nama.innerHTML = '';
