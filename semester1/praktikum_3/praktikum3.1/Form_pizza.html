@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form pemesanan</title>
+</head>
+
+<body style="margin: 0;">
+    <div style="width: 150vh; border: 1px solid rgb(195, 195, 195); margin: auto; padding: 3vh; margin-bottom: 50vh;">
+        <h1>Black Goose Bistro | Pizza-on-Demand</h1>
+        <p> Our 12 " wood-fired-pizzas ar available for delivery. Build your custom pizza and we'll deliver it within an
+            hour.</p>
+        <p>your information :</p>
+        <form action="http://blackgoosebistro.com/pizza.php" method="post">
+            <ol style="list-style: none; margin-left: -6vh;">
+                <li style="margin-bottom: 1vh;">Name :<input type="text" name="customername" placeholder="Name"
+                        style="margin-left: 15vh;"></li>
+                <li style="margin-bottom: 1vh;">Address : <input type="text" name="address" placeholder="Address"
+                        style="margin-left: 13vh;"></li>
+                <li style="margin-bottom: 1vh;">Telephone number : <input type="text" name="telephone"
+                        placeholder="Telephone number" style="margin-left: 3vh;"></li>
+                <li style="margin-bottom: 1vh;">Email : <input type="email" name="email" placeholder="masukan email"
+                        style="margin-left: 15vh;"></li>
+                <li>
+                    <p>Delivery Instruction :</p><textarea name="instructions" cols="50" rows="5"
+                        style="margin-left: vh;"></textarea>
+                </li>
+            </ol>
+
+
+        <h3>Design Your Dream Pizza :</h3>
+        <!-- <fieldset> -->
+            <legend>Pizza specs</legend>
+            <p>Crust(Choose one):</p>
+                <input type="radio" name="crust" value="Classic_white">Classic white <br>
+                <input type="radio" name="crust" value="Multigrain">Multigrain <br>
+                <input type="radio" name="crust" value="Cheese-stufeed crust">Cheese-stufeed crust <br>
+                <input type="radio" name="crust" value="Glutan-free">Glutan-free <br>
+                <p>Toppings(Choose as many as you want)</p>
+                <input type="checkbox" name="toppings[]" value="Red sauce">Red sauce <br>
+                <input type="checkbox" name="toppings[]" value="White sauce">White sauce <br>
+                <input type="checkbox" name="toppings[]" value="Mozzarella Cheese">Mozzarella Cheese <br>
+                <input type="checkbox" name="toppings[]" value="Pepperoni">Pepperoni <br>
+                <input type="checkbox" name="toppings[]" value="mushrooms">mushrooms <br>
+                <input type="checkbox" name="toppings[]" value="Peppers">Peppers <br>
+                <input type="checkbox" name="toppings[]" value="Anchovies">Anchovies <br>
+                <br>
+                number<br>
+               <label for="pizzas">How many pizzas :</label>
+               <select name="pizzas" id="pizzas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+               </select>
+        <br><br>
+        <button type="submit">Bring me pizza!</button>
+        <button type="reset">Reset</button>
+        </form>
+    <!-- </fieldset> -->
+
+    </div>
+</body>
+
+</html>

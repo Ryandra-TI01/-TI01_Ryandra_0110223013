@@ -1,0 +1,88 @@
+.navbar-brand,.nav-link{
+    color: rgb(255, 255, 255);
+}
+.navbar-brand:hover,.nav-link:hover{
+    color: rgb(248, 182, 135);
+}
+.judul{
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
+.komen-judul{
+    font-size:1.3rem;
+}
+.navbar-toggler{
+    background-color: white;
+}
+.pAbout-us{
+    font-size: 1.5rem;
+}
+.pcontact{
+    font-size:0.9rem;
+    text-align: justify;
+}
+.card{
+    box-shadow: 3px 3px 8px rgb(187, 187, 187);
+}
+
+.footer-icon{
+    color: white;
+}
+.footer-icon:hover{
+    color: rgb(248, 182, 135);
+}
+
+@media(max-width:1200px){
+    .judul{
+        font-size: 3.5rem;
+    }
+    
+}
+@media(max-width:992px){
+    .francise-map{
+        text-align: center;
+    }
+    .judul{
+        font-size: 3.3rem;
+    }
+    .komen-judul{
+        font-size: 1.1rem;
+    }
+    .pAbout-us{
+        font-size: 1.2rem;
+    }
+    
+}
+@media(max-width:768px){
+    .judul{
+        font-size: 3rem;
+    }
+    .komen-judul{
+        font-size: 0.9rem;
+    }
+    #about > div > div > div> h3{
+        display: none;
+    }
+    #about > div > div > div> img{
+        width: 375px;
+    }
+    .pContact{
+        font-size: 0.6rem;
+    }
+}
+@media(max-width:576px){
+    .judul{
+        font-size: 2rem;
+    }
+    .komen-judul{
+        font-size: 0.7rem;
+    }
+    th,td{
+        font-size: 0.6rem;
+    }
+}
+@media(max-width:420px){
+    th,td{
+        font-size: 0.5rem;
+    }
+}
