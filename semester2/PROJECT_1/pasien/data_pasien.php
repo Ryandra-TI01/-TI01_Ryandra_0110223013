@@ -1,4 +1,4 @@
-<?php include_once './layouts/top.php' ?>
+<?php include_once '../layouts/top.php' ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
@@ -18,7 +18,6 @@
 		</div>
 		<!-- /.container-fluid -->
 	</section>
-
 	<!-- Main content -->
 	<section class="content">
 		<div class="container-fluid">
@@ -47,9 +46,11 @@
 								<th scope="col">Nama</th>
 								<th scope="col">Tempat Lahir</th>
 								<th scope="col">Tanggal Lahir</th>
-								<th scope="col">Gender</th>
+								<!-- <th scope="col">Gender</th> -->
 								<th scope="col">Email</th>
-								<th scope="col">alamat</th>                             
+								<th scope="col">Alamat</th>  
+								<th scope="col">Catatan</th>         
+								<th colspan="2" scope="col" class="text-center">Aksi</th>                  
 								</tr>
 								</thead>
 								<tbody>
@@ -60,11 +61,12 @@
 											<td><?= $key['nama']?></td>
 											<td><?= $key['tmp_lahir']?></td>
 											<td><?= $key['tgl_lahir']?></td>
-											<td><?= $key['gender']?></td>
+											<!-- <td><?= $key['gender']?></td> -->
 											<td><?= $key['email']?></td>
 											<td><?= $key['alamat']?></td>
-											<td><a href="">Edit</a></td>
-											<td><a href=""> Delete</a></td>
+											<td ><a href="">Details</a></td>
+											<td><a href="edit_pasien.php?id=<?=$key['id']; ?>">Edit </a></td>
+											<td><a href="#" onclick="confirm_delete(<?= $key['id']; ?>)">Delete</a></td>
 										</tr>
 								<?php endforeach ?>
 								</tbody>
@@ -79,4 +81,4 @@
 	<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<?php include_once './layouts/bottom.php' ?>
+<?php include_once '../layouts/bottom.php' ?>

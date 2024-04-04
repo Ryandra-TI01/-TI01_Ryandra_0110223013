@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #19705C; /* Warna utama */
+}
+*{text-decoration: none !important;}
+.main-sidebar{
+    background-color: var(--primary-color);
+}
+button{
+    background-color: var(--primary-color)!important;
+}
+  
