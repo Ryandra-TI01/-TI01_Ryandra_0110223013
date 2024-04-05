@@ -44,9 +44,6 @@
 								<th scope="col">No</th>
 								<th scope="col">Kode</th>
 								<th scope="col">Nama</th>
-								<th scope="col">Tempat Lahir</th>
-								<th scope="col">Tanggal Lahir</th>
-								<!-- <th scope="col">Gender</th> -->
 								<th scope="col">Email</th>
 								<th scope="col">Alamat</th>  
 								<th scope="col">Catatan</th>         
@@ -59,12 +56,9 @@
 											<th scope="row"><?=$nomor++ ?></th>
 											<td><?= $key['kode']?></td>
 											<td><?= $key['nama']?></td>
-											<td><?= $key['tmp_lahir']?></td>
-											<td><?= $key['tgl_lahir']?></td>
-											<!-- <td><?= $key['gender']?></td> -->
 											<td><?= $key['email']?></td>
 											<td><?= $key['alamat']?></td>
-											<td ><a href="">Details</a></td>
+											<td ><a href="../catatan_pasien/data_periksa_pasien.php?id=<?=$key['id']; ?>">Details</a></td>
 											<td><a href="edit_pasien.php?id=<?=$key['id']; ?>">Edit </a></td>
 											<td><a href="#" onclick="confirm_delete(<?= $key['id']; ?>)">Delete</a></td>
 										</tr>
