@@ -91,13 +91,17 @@ $row = $query_edit->fetch_assoc();
 								<div class="mb-3 row">
 									<label for="kelurahan" class="col-sm-3 form-label">Kelurahan :</label>
 									<div class="col-sm-9">
-										<select class="form-select" aria-label="Default select example" name="kelurahan_id" id="kelurahan_id" required>
-											<option disabled value="">Choose...</option>
+										<!-- <select class="form-select" aria-label="Default select example" name="kelurahan_id" id="kelurahan_id" required>
 											<option value="1" <?=($row['kelurahan_id']=='1')?'selected':''?>>Tapos</option>
 											<option value="2" <?=($row['kelurahan_id']=='2')?'selected':''?>>Jatijajar</option>
 											<option value="3" <?=($row['kelurahan_id']=='3')?'selected':''?>>Cilangkap</option>
 											<option value="4" <?=($row['kelurahan_id']=='4')?'selected':''?>>Sukamaju Baru</option>
 											<option value="5" <?=($row['kelurahan_id']=='5')?'selected':''?>>Sukatani</option>
+										</select> -->
+										<select class="form-select" aria-label="Default select example" name="kelurahan_id" id="kelurahan_id" required>
+											<?php foreach ($query_3 as $key => $value) : ?>
+												<option value="<?= $value['kec_id'] ?>" <?=($row['kelurahan_id'] == $value['kec_id'])?'selected':'' ?>><?= $value['nama'] ?></option>
+											<?php endforeach  ?>
 										</select>
 									</div>
 								</div>

@@ -44,7 +44,13 @@
                 if (result) {
                     window.location.href = 'delete_pasien.php?id=' + id;
                 }
-            }
+            };
+        function confirm_delete_paramedik(id) {
+                let result = confirm('Apakah Anda yakin ingin menghapus data ini?');
+                if (result) {
+                    window.location.href = 'delete_paramedik.php?id=' + id;
+                }
+            };
         </script>
 	</body>
 </html>
