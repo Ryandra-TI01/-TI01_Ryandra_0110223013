@@ -83,7 +83,7 @@ $row = $query_edit->fetch_assoc();
 									</div>
 								</div>
 								<div class="mb-3 row">
-									<label for="telpon" class="col-sm-3 col-form-label">Telepom :</label>
+									<label for="telpon" class="col-sm-3 col-form-label">Telepon :</label>
 									<div class="col-sm-9">
 										<input type="text" class="form-control" id="telpon" name="telpon" required value="<?= $row['telpon'] ?>"/>
 									</div>
