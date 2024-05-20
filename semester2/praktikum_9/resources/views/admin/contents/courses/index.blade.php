@@ -3,12 +3,12 @@
     
 
 <div class="pagetitle">
-    <h1>Student</h1>
+    <h1>Courses</h1>
     <nav>
       <ol class="breadcrumb">
         {{-- <li class="breadcrumb-item"><a href="/admin/dashboard">Home</a></li> --}}
         <li class="breadcrumb-item"></li>
-        <li class="breadcrumb-item active">Student</li>
+        <li class="breadcrumb-item active">Courses</li>
       </ol>
     </nav>
   </div><!-- End Page Title -->
@@ -22,18 +22,16 @@
                     <tr>
                         <th>no</th>
                         <th>name</th>
-                        <th>nim</th>
-                        <th>major</th>
-                        <th>class</th>
+                        <th>category</th>
+                        <th>desc</th>
                         <th>action</th>
                     </tr>
-                    @foreach ($student as $student_data)
+                    @foreach ($courses as $course)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $student_data->name }}</td>
-                            <td>{{ $student_data->nim }}</td>
-                            <td>{{ $student_data->major }}</td>
-                            <td>{{ $student_data->class }}</td>
+                            <td>{{ $course->name }}</td>
+                            <td>{{ $course->category }}</td>
+                            <td>{{ $course->desc }}</td>
                             <td>
                                 <a href="#" class="btn btn-warning">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
