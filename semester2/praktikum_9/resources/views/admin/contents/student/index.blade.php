@@ -16,7 +16,7 @@
   <div class="section">
     <div class="card">
         <div class="card-body p-3">
-            <a href="student/create" class="btn btn-primary m-3">+ Tambah</a>
+            <a href="/admin/student/create" class="btn btn-primary m-3">+ Tambah</a>
             <div class="table-responsive">
                 <table class="table">
                     <tr>
@@ -34,9 +34,13 @@
                             <td>{{ $student_data->nim }}</td>
                             <td>{{ $student_data->major }}</td>
                             <td>{{ $student_data->class }}</td>
-                            <td>
-                                <a href="#" class="btn btn-warning">Edit</a>
-                                <a href="#" class="btn btn-danger">Delete</a>
+                            <td class="d-flex">
+                                <a href="/admin/student/edit/{{ $student_data->id }}" class="btn btn-warning">Edit</a>
+                                <form method="POST" action="/admin/student/delete/{{ $student_data->id }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="ms-3 btn btn-danger" type="submit" onclick="return confirm('Apakah anda ingin mengahpusnya?')">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

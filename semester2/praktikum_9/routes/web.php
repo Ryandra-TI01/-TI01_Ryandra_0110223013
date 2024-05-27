@@ -28,6 +28,19 @@ use Illuminate\Support\Facades\Route;
 
 // dashboar route
 route::get('admin/dashboard',[DashboardController::class,'index']);
-Route::get('pasien/show',[PasienController::class,'show']);
+// Route::get('pasien/show',[PasienController::class,'show']);
 Route::get('admin/student',[StudentController::class,'index']);
 Route::get('admin/courses',[CoursesController::class,'index']);
+
+// menampilkan data student
+Route::get('admin/student/create',[StudentController::class,'create']);
+Route::post('admin/student/create',[StudentController::class,'store']);
+
+// edit data
+Route::get('admin/student/edit/{id}',[StudentController::class,'edit'])->name('student.edit');
+
+// update data student
+Route::put('admin/student/update/{id}',[StudentController::class,'update']);
+
+// menghapus data
+Route::delete('admin/student/delete/{id}',[StudentController::class,'destroy']);
