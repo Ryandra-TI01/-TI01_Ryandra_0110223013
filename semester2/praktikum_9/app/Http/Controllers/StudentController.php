@@ -15,11 +15,11 @@ class StudentController extends Controller
             'student'=> $student
         ]);
     }
-
     // method untuk menampilkan data student
     public function create(){
         return view('admin.contents.student.create');
     }
+    // method mengirim data
     public function store(Request $request){
         $request->validate([
             'name'=>'required',

@@ -9,4 +9,5 @@ class Courses extends Model
 {
     use HasFactory;
     protected $Courses = 'courses';
+    protected $fillable = ['name','category','desc'];
 }

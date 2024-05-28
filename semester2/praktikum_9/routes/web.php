@@ -28,19 +28,29 @@ use Illuminate\Support\Facades\Route;
 
 // dashboar route
 route::get('admin/dashboard',[DashboardController::class,'index']);
-// Route::get('pasien/show',[PasienController::class,'show']);
-Route::get('admin/student',[StudentController::class,'index']);
-Route::get('admin/courses',[CoursesController::class,'index']);
 
-// menampilkan data student
+
+// ------ index course --------
+Route::get('admin/courses',[CoursesController::class,'index']);
+// menampilkan data 
+Route::get('admin/courses/create',[CoursesController::class,'create']);
+Route::post('admin/courses/create',[CoursesController::class,'store']);
+// edit data
+Route::get('admin/courses/edit/{id}',[CoursesController::class,'edit'])->name('courses.edit');
+// update data
+Route::put('admin/courses/update/{id}',[CoursesController::class,'update']);
+// menghapus data
+Route::delete('admin/courses/delete/{id}',[CoursesController::class,'destroy']);
+
+
+// ------ index student --------
+Route::get('admin/student',[StudentController::class,'index']);
+// menampilkan data 
 Route::get('admin/student/create',[StudentController::class,'create']);
 Route::post('admin/student/create',[StudentController::class,'store']);
-
 // edit data
 Route::get('admin/student/edit/{id}',[StudentController::class,'edit'])->name('student.edit');
-
-// update data student
+// update data
 Route::put('admin/student/update/{id}',[StudentController::class,'update']);
-
 // menghapus data
 Route::delete('admin/student/delete/{id}',[StudentController::class,'destroy']);
