@@ -25,6 +25,7 @@
                         <th>nim</th>
                         <th>major</th>
                         <th>class</th>
+                        <th>course</th>
                         <th>action</th>
                     </tr>
                     @foreach ($student as $student_data)
@@ -34,6 +35,8 @@
                             <td>{{ $student_data->nim }}</td>
                             <td>{{ $student_data->major }}</td>
                             <td>{{ $student_data->class }}</td>
+                            <td>{!! $student_data->course->name ?? '<span class="badge bg-danger">belum</span>' !!}</td>
+                            
                             <td class="d-flex">
                                 <a href="/admin/student/edit/{{ $student_data->id }}" class="btn btn-warning">Edit</a>
                                 <form method="POST" action="/admin/student/delete/{{ $student_data->id }}">

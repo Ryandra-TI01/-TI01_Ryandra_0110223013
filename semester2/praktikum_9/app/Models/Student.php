@@ -9,5 +9,11 @@ class Student extends Model
 {
     use HasFactory;
     protected $table = 'student';
-    protected $fillable = ['name','nim','major','class'];
+    protected $fillable = ['name','nim','major','class','course_id'];
+
+    // 1 to 1
+    // 
+    public function course(){
+        return $this->belongsTo(Courses::class);
+    }
 }
