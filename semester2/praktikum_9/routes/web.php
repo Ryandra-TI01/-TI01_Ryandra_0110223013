@@ -39,7 +39,7 @@ Route::delete('admin/student/delete/{id}',[StudentController::class,'destroy']);
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing_page');
 });
 
 // Route::get('/dashboard', function () {
@@ -50,6 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
     // ------ index course --------
     Route::get('admin/courses',[CoursesController::class,'index']);
     // menampilkan data 
@@ -61,7 +62,6 @@ Route::middleware('auth')->group(function () {
     Route::put('admin/courses/update/{id}',[CoursesController::class,'update']);
     // menghapus data
     Route::delete('admin/courses/delete/{id}',[CoursesController::class,'destroy']);
-
 
     // ------ index student --------
     Route::get('admin/student',[StudentController::class,'index']);
