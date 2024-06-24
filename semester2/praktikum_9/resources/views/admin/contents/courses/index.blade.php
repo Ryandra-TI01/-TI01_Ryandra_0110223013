@@ -16,7 +16,9 @@
   <div class="section">
     <div class="card">
         <div class="card-body p-3">
-            <a href="/admin/courses/create" class="btn btn-primary m-3">+ Tambah</a>
+            @if (Auth::user()->role == 'administrator')
+             <a href="/admin/courses/create" class="btn btn-primary m-3">+ Tambah</a>
+            @endif
             <div class="table-responsive">
                 <table class="table">
                     <tr>
@@ -24,7 +26,9 @@
                         <th>name</th>
                         <th>category</th>
                         <th>desc</th>
-                        <th>action</th>
+                        @if (Auth::user()->role == 'administrator')
+                            <th>action</th>
+                        @endif
                     </tr>
                     @foreach ($courses as $course)
                         <tr>
@@ -32,6 +36,7 @@
                             <td>{{ $course->name }}</td>
                             <td>{{ $course->category }}</td>
                             <td>{{ $course->desc }}</td>
+                            @if (Auth::user()->role == 'administrator')
                             <td class="d-flex">
                                 <a href="/admin/courses/edit/{{ $course->id }}" class="btn btn-warning me-3">Edit</a>
                                 <form method="POST" action="/admin/courses/delete/{{ $course->id }}">
@@ -40,6 +45,7 @@
                                     <button class="ms-3 btn btn-danger" type="submit" onclick="return confirm('Apakah anda ingin mengahpusnya?')">Hapus</button>
                                 </form>
                             </td>
+                            @endif
                         </tr>
                     @endforeach
                 </table>

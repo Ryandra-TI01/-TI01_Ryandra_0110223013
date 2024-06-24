@@ -13,17 +13,20 @@
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link  @if($currentRoute != 'admin/student') collapsed @endif" href="/admin/student">
-          <i class="bi bi-person"></i>
-          <span>Student</span>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link  @if($currentRoute != 'admin/courses') collapsed @endif" href="/admin/courses">
           <i class="bi bi-book"></i>
           <span>Courses</span>
         </a>
       </li>
+      @if (Auth::user()->role == 'administrator')
+      <li class="nav-item">
+        <a class="nav-link  @if($currentRoute != 'admin/student') collapsed @endif" href="/admin/student">
+          <i class="bi bi-person"></i>
+          <span>Student</span>
+        </a>
+      </li>
+
+      @endif
 
     </ul>
 
